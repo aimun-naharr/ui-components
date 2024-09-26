@@ -17,7 +17,7 @@ export default function ShimmerButton({ children = 'button', width = 100 }) {
 
         <div className='p-[1.5px] bg-[#176D87] glow-btn-clip'>
           <div className="px-6
-        py-3
+        py-2
         bg-gradient-to-b
         from-[#118AA9]
         from-10% to-90%

@@ -17,7 +17,7 @@ export default function GlowButton({ children = 'button', width = 100 }) {
         className="glow-btn bg-[#3AB0D026] glow-btn-clip  transparent  p-[4px] overflow-hidden text-white  relative group-hover:after:content-[''] group-hover:after:absolute group-hover:after:glow-effect group-hover:after:h-[--glow-btn-after-content-height] group-hover:after:w-[2rem] group-hover:after:top-1/2 group-hover:after:left-1/2 group-hover:after:-translate-x-1/2 group-hover:after:-translate-y-1/2 group-hover:after:rotate-[45deg] group-hover:after:animate-rotate-full  ">
 
         <div className='p-[1.5px] bg-[#176D87] glow-btn-clip z-[10] relative'>
-          <div className="px-6 py-3 bg-gradient-to-b from-[#118AA9] from-10% to-90% to-[#1A5A70]  font-semibold relative  w-[--glow-btn-content-width]   glow-btn-clip text-shadow">
+          <div className="px-6 py-2 bg-gradient-to-b from-[#118AA9] from-10% to-90% to-[#1A5A70]  font-semibold relative  w-[--glow-btn-content-width]   glow-btn-clip text-shadow">
 
             {children}
           </div>
