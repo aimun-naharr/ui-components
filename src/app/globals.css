@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 10rem 8rem;
+  background-color: #0b3241;
+}
+.glow-btn-clip {
+  clip-path: polygon(100% 0, 100% 67%, 92% 100%, 0% 100%, 0 41%, 0% 0%);
+}
+@layer utilities {
+  .animation-pause {
+    animation-play-state: paused;
+  }
+  .animation-delay-75 {
+    animation-delay: 100ms;
+  }
+  .text-shadow {
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+  }
+  .glow-effect {
+    background-image: radial-gradient(#16a3c7, transparent);
+  }
+  .shimmer-effect {
+    background-image: radial-gradient(#16a4c73f, transparent);
+  }
+}
