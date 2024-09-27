@@ -15,7 +15,10 @@ body {
   box-shadow: -5px 5px 0 white;
 }
 .glow-btn-clip {
-  clip-path: polygon(100% 0, 100% 67%, 92% 100%, 0% 100%, 0 41%, 0% 0%);
+  clip-path: polygon(100% 0, 100% 60%, 96% 100%, 0% 100%, 0 40%, 0% 0%);
+}
+.glow-btn-outer-clip {
+  clip-path: polygon(100% 0, 100% 62%, 95.5% 100%, 0% 100%, 0 40%, 0% 0%);
 }
 @layer utilities {
   .animation-pause {

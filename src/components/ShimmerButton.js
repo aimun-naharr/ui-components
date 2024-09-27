@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-export default function ShimmerButton({ children = 'button', width = 100 }) {
+export default function ShimmerButton( { children = 'button', width = 100 } ) {
   return (
     <button className='relative group '>
       <div className='border-b border-r border-r-[#128AA9] border-b-[#128AA9] size-2 absolute bottom-0 right-0 group-hover:border-b-2 group-hover:border-r-2'></div>
@@ -11,7 +11,7 @@ export default function ShimmerButton({ children = 'button', width = 100 }) {
 
           '--glow-btn-content-width': `${width}px`
         }}
-        className="glow-btn bg-[#3AB0D026] group-hover:bg-[#218da8a6]  transparent  p-[4px] overflow-hidden text-white  relative transition-colors duration-500 glow-btn-clip
+        className="glow-btn bg-[#3AB0D026] group-hover:bg-[#218da8a6]  transparent  p-[4px] overflow-hidden text-white  relative transition-colors duration-500 glow-btn-outer-clip
          ">
 
 
