@@ -8,8 +8,11 @@
   box-sizing: border-box;
 }
 body {
-  padding: 10rem 8rem;
-  background-color: #0b3241;
+  /* padding: 10rem 8rem; */
+  /* background-color: #0b3241; */
+}
+.carousel-custom-circle-shadow::before {
+  box-shadow: -5px 5px 0 white;
 }
 .glow-btn-clip {
   clip-path: polygon(100% 0, 100% 67%, 92% 100%, 0% 100%, 0 41%, 0% 0%);
