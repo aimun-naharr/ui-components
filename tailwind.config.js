@@ -1,4 +1,4 @@
-const { transform } = require('next/dist/build/swc');
+const { transform } = require( 'next/dist/build/swc' );
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -34,8 +34,8 @@ module.exports = {
           '50%': { transform: 'scale(1) rotate(180deg)', opacity: 1 },
         },
         beam: {
-          from: { "backgroundPosition": "0 0" },
-          to: { "backgroundPosition": "0 -200%" }
+          from: { "backgroundPosition": "0% 0%" },
+          to: { "backgroundPosition": " -150% 0" }
         }
 
       },
@@ -43,7 +43,7 @@ module.exports = {
         'rotate-full': 'rotate-full 2.5s linear infinite',
         'spin-scale': 'spin-scale 2s ease-in-out',
         shimmer: "shimmer 3s linear forwards infinite",
-        beam: "beam 2s linear forwards infinite",
+        beam: "beam 4s linear forwards infinite",
       }
     },
   },
