@@ -1,7 +1,7 @@
 import glowingStar from '@/assets/glowingStar.svg'
 import Image from 'next/image'
 
-export default function GlowButton( { children = 'button', width = 100 } ) {
+export default function GlowButton({ children = 'button', width = 100 }) {
   const afterContentHeight = width + 20
   return (
     <button className='relative group'>
