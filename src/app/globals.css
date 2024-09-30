@@ -10,6 +10,10 @@
 @view-transition {
   navigation: auto;
 }
+html {
+  view-transition-name: none;
+}
+
 .carousel-custom-circle-shadow::before {
   box-shadow: -5px 5px 0 white;
 }
