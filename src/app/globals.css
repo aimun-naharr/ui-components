@@ -7,9 +7,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  /* padding: 10rem 8rem; */
-  /* background-color: #0b3241; */
+@view-transition {
+  navigation: auto;
 }
 .carousel-custom-circle-shadow::before {
   box-shadow: -5px 5px 0 white;

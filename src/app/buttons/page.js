@@ -5,7 +5,7 @@ import ShimmerButton from "@/components/ShimmerButton";
 
 const ButtonsPage = () => {
     return (
-        <div>
+        <div className="bg-cyan-950 h-screen pl-20 pt-20">
             <h1 className="text-2xl text-zinc-100 font-bold">Button variants</h1>
             <div className="my-10 space-y-8">
 

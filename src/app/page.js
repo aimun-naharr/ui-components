@@ -1,31 +1,21 @@
-import GlowButton from "@/components/GlowButton";
-import LitButton from "@/components/LitButton";
-import ShimmerButton2 from "@/components/ShimmerButon2";
-import ShimmerButton from "@/components/ShimmerButton";
+
+import Container from "@/components/Container";
+import MobbinCarousel from "@/components/MobbinCarousel";
+import Link from "next/link";
 
 
 
 export default function Home() {
   return (
-    <div className="bg-cyan-950 h-screen pl-20 pt-20">
-      <h1 className="text-2xl text-zinc-100 font-bold">Button variants</h1>
-      <div className="my-10 space-y-8">
+    <div className=" my-10">
+      <Container>
+        <h1>Button variants</h1>
+        <Link href={'/buttons'} className="bg-zinc-200 px-6 py-2">Explore Buttons</Link>
 
-        <div>
-          <GlowButton width={300}>Place your order</GlowButton>
+        <div className="my-10">
+          <MobbinCarousel />
         </div>
-        <div>
-          <ShimmerButton width={300}>Shimmer button</ShimmerButton>
-        </div>
-        <div>
-          <ShimmerButton2 width={300}>Purchase as gift</ShimmerButton2>
-        </div>
-
-
-        <div>
-          <LitButton>Lit button</LitButton>
-        </div>
-      </div>
+      </Container>
     </div>
   );
 }
