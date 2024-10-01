@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <AnimatedCursor color="145, 212, 231" />
+          {/* <AnimatedCursor color="145, 212, 231" /> */}
           {children}
         </body>
       </html>

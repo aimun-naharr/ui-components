@@ -5,13 +5,33 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
+}
+:root {
+  --bg-primary: 0 0% 100%;
 }
 @view-transition {
   navigation: auto;
 }
 html {
   view-transition-name: none;
+}
+.floating-card {
+  view-transition-name: floating-card;
+}
+.floating-card-next-btn {
+  background: linear-gradient(
+    270deg,
+    hsl(var(--bg-primary)) 60%,
+    hsl(var(--bg-primary) / 0%)
+  );
+}
+.floating-card-prev-btn {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--bg-primary)) 60%,
+    hsl(var(--bg-primary) / 0%)
+  );
 }
 
 .carousel-custom-circle-shadow::before {
@@ -38,5 +58,8 @@ html {
   }
   .shimmer-effect {
     background-image: radial-gradient(#16a4c73f, transparent);
+  }
+  .border-red {
+    @apply border-2 border-red-500;
   }
 }
