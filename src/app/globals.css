@@ -43,6 +43,16 @@ html {
 .glow-btn-outer-clip {
   clip-path: polygon(100% 0, 100% 62%, 95.5% 100%, 0% 100%, 0 40%, 0% 0%);
 }
+.button-svg path {
+  fill: lavender;
+}
+.button-svg path:first-child {
+  fill: salmon;
+}
+svg:not(:root) {
+  overflow-clip-margin: content-box;
+}
+
 @layer utilities {
   .animation-pause {
     animation-play-state: paused;
