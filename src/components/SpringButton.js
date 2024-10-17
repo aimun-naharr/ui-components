@@ -8,24 +8,48 @@ export default function SpringButton() {
   const [isHovered, setIsHovered] = useState(false)
   const initialPath = `M36,0 L170,0 C217.34,0 217.34,72 170,72 L36,72 C-11.34,72 -11.34,0 36,0`
   const forwardPath = `M36,0 L170,0 C250.34,0 250.34,72 170,72 L36,72 C-11.34,72 -11.34,0 36,0`
+  const forwardPath2 = `M36,0 L170,0 C210.34,0 210.34,72 170,72 L36,72 C-11.34,72 -11.34,0 36,0`
   const backwardPath = `M36,0 L170,0 C168.34,0 168.34,72 170,72 L36,72 C-11.34,72 -11.34,0 36,0`
+  const backwardPath2 = `M36,0 L170,0 C200.34,0 200.34,72 170,72 L36,72 C-11.34,72 -11.34,0 36,0`
 
+  function easeOutBounce(x) {
+    const n1 = 7.5625;
+    const d1 = 2.75;
 
+    if (x < 1 / d1) {
+      return n1 * x * x;
+    } else if (x < 2 / d1) {
+      return n1 * (x -= 1.5 / d1) * x + 0.75;
+    } else if (x < 2.5 / d1) {
+      return n1 * (x -= 2.25 / d1) * x + 0.9375;
+    } else {
+      return n1 * (x -= 2.625 / d1) * x + 0.984375;
+    }
+  }
+  const easeInBounce = (x) => {
+    const c4 = (2 * Math.PI) / 3;
 
+    return x === 0
+      ? 0
+      : x === 1
+        ? 1
+        : Math.pow(2, -10 * x) * Math.sin((x * 10 - 0.75) * c4) + 1;
+  }
   const pathAnimation = {
     initial: {
       d: initialPath
     },
     enter: (delay = 0) => ({
-      d: [backwardPath, initialPath],
+      d: [backwardPath, forwardPath, initialPath, backwardPath2, forwardPath2, initialPath],
       transition: {
-        duration: 0.1,
+        duration: 0.8,
         delay: delay,
-        // ease: [.95, -0.15, .19, 2.01],
-        type: 'spring',
-        stiffness: 250,
-        damping: 5,
-        mass: 0.5
+        // ease: [0.68, -0.6, 0.32, 1.6],
+        // type: 'spring',
+        // stiffness: 250,
+        // damping: 5,
+        // mass: 0.5,
+        // times: [0, 0.1, 0.5, 0.8, 0.9, 1]
       }
     }),
 
