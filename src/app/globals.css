@@ -45,6 +45,7 @@ html {
 }
 .button-svg path {
   fill: lavender;
+  position: absolute;
 }
 .button-svg path:first-child {
   fill: salmon;
