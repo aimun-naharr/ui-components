@@ -1,6 +1,6 @@
-This is my blank canvas where I practise my frontend skills by recreating unique components.
+### This is my blank canvas where I practise my frontend skills by recreating unique components.
 
-## Getting Started
+# Getting Started
 
 First, install all the packages:
 

@@ -21,7 +21,7 @@ export default function Home() {
     initial: {
       d: initialPath
     },
-    enter: (delay = 0.01) => ({
+    enter: (delay = 0) => ({
       d: [backwardPath, initialPath],
       transition: {
         duration: 0.2,
@@ -40,15 +40,12 @@ export default function Home() {
   return (
     <div className=" my-10">
       <Container>
-        <h1 className="mb-4 font-semibold">Button variants</h1>
-
-
-
-        {/* <div className="my-10">
-          <h1 className="mb-4 font-semibold">Mobbin carousel</h1>
-          <MobbinCarousel />
-        </div> */}
-        <div className="relative ">
+        <h1 className="mb-1 font-semibold text-4xl ">Button variants</h1>
+        <p
+          className="">
+          Inspired by  <Link className="text-blue-500 italic underline" href={'https://nodcoding.com/'} target='_blank'>Nod coding</Link>
+        </p>
+        <div className="relative mt-4">
           <SpringButton />
         </div>
       </Container>

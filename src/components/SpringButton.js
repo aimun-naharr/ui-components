@@ -8,7 +8,7 @@ export default function SpringButton() {
   const [isHovered, setIsHovered] = useState(false)
   const initialPath = `M36,0 L170,0 C217.34,0 217.34,72 170,72 L36,72 C-11.34,72 -11.34,0 36,0`
   const forwardPath = `M36,0 L170,0 C250.34,0 250.34,72 170,72 L36,72 C-11.34,72 -11.34,0 36,0`
-  const backwardPath = `M36,0 L170,0 C178.34,0 178.34,72 170,72 L36,72 C-11.34,72 -11.34,0 36,0`
+  const backwardPath = `M36,0 L170,0 C168.34,0 168.34,72 170,72 L36,72 C-11.34,72 -11.34,0 36,0`
 
 
 
@@ -37,7 +37,7 @@ export default function SpringButton() {
       href={'/buttons'} className=" relative  rounded   z-[2] text-black text-xl  w-full h-full group ">
 
       <div className='relative  inline-block top-[20px] left-[16px] px-4'>
-        <span className=" inline-block text-xl group-hover:-translate-x-2 transition-transform duration-300  whitespace-nowrap">
+        <span className=" inline-block text-xl group-hover:-translate-x-2 font-semibold transition-transform duration-300  whitespace-nowrap">
           Explore Buttons
         </span>
         <span className="absolute inline-block text-xl group-hover:-translate-x-8 opacity-0 group-hover:opacity-[1] transition-transform duration-300 top-2 -right-8 whitespace-nowrap">
