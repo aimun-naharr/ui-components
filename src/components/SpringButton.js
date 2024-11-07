@@ -7,10 +7,8 @@ import React, { useState } from 'react'
 export default function SpringButton() {
   const [isHovered, setIsHovered] = useState(false)
   const initialPath = `M36,0 L170,0 C217.34,0 217.34,72 170,72 L36,72 C-11.34,72 -11.34,0 36,0`
-  const forwardPath = `M36,0 L170,0 C250.34,0 250.34,72 170,72 L36,72 C-11.34,72 -11.34,0 36,0`
-  const forwardPath2 = `M36,0 L170,0 C210.34,0 210.34,72 170,72 L36,72 C-11.34,72 -11.34,0 36,0`
-  const backwardPath = `M36,0 L170,0 C168.34,0 168.34,72 170,72 L36,72 C-11.34,72 -11.34,0 36,0`
-  const backwardPath2 = `M36,0 L170,0 C200.34,0 200.34,72 170,72 L36,72 C-11.34,72 -11.34,0 36,0`
+
+  const backwardPath = `M36,0 L170,0 C148.34,0 148.34,72 170,72 L36,72 C-11.34,72 -11.34,0 36,0`
 
   function easeOutBounce(x) {
     const n1 = 7.5625;
@@ -40,15 +38,15 @@ export default function SpringButton() {
       d: initialPath
     },
     enter: (delay = 0) => ({
-      d: [backwardPath, forwardPath, initialPath, backwardPath2, forwardPath2, initialPath],
+      d: [backwardPath, initialPath],
       transition: {
-        duration: 0.8,
+        duration: 0.1,
         delay: delay,
         // ease: [0.68, -0.6, 0.32, 1.6],
-        // type: 'spring',
-        // stiffness: 250,
-        // damping: 5,
-        // mass: 0.5,
+        type: 'spring',
+        stiffness: 250,
+        damping: 4,
+        mass: 0.5,
         // times: [0, 0.1, 0.5, 0.8, 0.9, 1]
       }
     }),
@@ -79,14 +77,19 @@ export default function SpringButton() {
         preserveAspectRatio="none"
 
         style={{ width: '190px', height: '60px' }}>
-        <motion.path custom={-0.1}
+        <motion.path
+          custom={-0.1}
           variants={pathAnimation}
           initial={'initial'}
           // animate={isHovered ? 'enter' : 'initial'}
           className=" btn-plain__path js-background-path">
 
         </motion.path>
-        <motion.path variants={pathAnimation} initial={'initial'} animate={isHovered ? 'enter' : 'initial'} className=" btn-plain__path js-background-path">
+        <motion.path
+          variants={pathAnimation}
+          initial={'initial'}
+          animate={isHovered ? 'enter' : 'initial'}
+          className=" btn-plain__path js-background-path">
 
         </motion.path>
       </svg>
