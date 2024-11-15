@@ -58,6 +58,16 @@ html {
 svg:not(:root) {
   overflow-clip-margin: content-box;
 }
+.diary-pages {
+  perspective: 1500px;
+  transform-style: preserve-3d;
+  .page {
+    transform-style: preserve-3d;
+    transform: rotate3d(0, 109064, -10, 0deg);
+    transform-origin: left center;
+    /* rotate3d(0, 109064, -10, 0deg)  need to decrease degree value*/
+  }
+}
 
 @layer utilities {
   .animation-pause {
