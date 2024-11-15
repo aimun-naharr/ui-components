@@ -20,13 +20,14 @@ const Diary = () => {
     // motion
     return (
         <div
-            ref={diaryContainer}
-            onMouseMove={handleMouseMove}
+
             className="w-4/5 mx-auto bg-[#F0ECE6] pt-10 pb-36 px-10 rounded-xl"
         >
-            <h1 className="mb-20 text-4xl font-bold text-center">Hover!!</h1>
-            <div className="bg-zinc-100 w-3/5 mx-auto h-[400px] rounded-3xl shadow-md">
-                <div className=" -rotate-[8deg] flex rounded-3xl shadow-2xl diary-pages">
+            <h1 className="mb-20 text-4xl font-bold text-center text-amber-800">Hover on pages!!</h1>
+            <div
+                ref={diaryContainer}
+                onMouseMove={handleMouseMove} className="bg-zinc-100 w-3/5 mx-auto h-[400px] rounded-3xl shadow-md ">
+                <div className=" -rotate-[8deg] flex rounded-3xl shadow-2xl diary-pages bg-white">
                     <div className="h-[400px]    w-1/2 bg-white rounded-tl-md rounded-bl-md">
 
                     </div>
