@@ -21,7 +21,7 @@ const Diary = () => {
     return (
         <div
 
-            className="w-4/5 mx-auto bg-[#F0ECE6] pt-10 pb-36 px-10 rounded-xl"
+            className="w-full mr-auto bg-[#F0ECE6] pt-10 pb-36 px-10 rounded-xl"
         >
             <h1 className="mb-20 text-4xl font-bold text-center text-amber-800">Hover on pages!!</h1>
             <div

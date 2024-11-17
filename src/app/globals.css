@@ -69,6 +69,9 @@ svg:not(:root) {
   }
 }
 
+.wavy-image {
+  filter: url(#displacementFilter);
+}
 @layer utilities {
   .animation-pause {
     animation-play-state: paused;
@@ -87,5 +90,8 @@ svg:not(:root) {
   }
   .border-red {
     @apply border-2 border-red-500;
+  }
+  .heading-1 {
+    @apply font-semibold text-4xl;
   }
 }
