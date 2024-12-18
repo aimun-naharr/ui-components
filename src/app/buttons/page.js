@@ -1,11 +1,14 @@
 import GlowButton from "@/components/GlowButton";
 import LitButton from "@/components/LitButton";
+import RadioButton from "@/components/RadioButton";
 import ShimmerButton2 from "@/components/ShimmerButon2";
 import ShimmerButton from "@/components/ShimmerButton";
+import ThemeSwitch from "@/components/ThemeSwitch";
 
 const ButtonsPage = () => {
     return (
-        <div className="bg-cyan-950 h-screen pl-20 pt-20">
+        <div className="bg-gray-200 h-screen pl-20 pt-20">
+            <ThemeSwitch />
             <h1 className="text-2xl text-zinc-100 font-bold">Button variants</h1>
             <div className="my-10 space-y-8">
 
@@ -22,6 +25,9 @@ const ButtonsPage = () => {
 
                 <div>
                     <LitButton>Lit button</LitButton>
+                </div>
+                <div>
+                    <RadioButton />
                 </div>
             </div>
         </div>

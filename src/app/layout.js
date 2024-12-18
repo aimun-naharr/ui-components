@@ -2,6 +2,9 @@ import localFont from "next/font/local";
 import AnimatedCursor from "react-animated-cursor";
 import "./globals.css";
 import { ViewTransitions } from "next-view-transitions";
+import { ThemeProvider } from 'next-themes'
+import dynamic from 'next/dynamic'
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,8 +29,11 @@ export default function RootLayout({ children }) {
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
+          <ThemeProvider>
+            {/* <ThemeSwitch /> */}
+            {children}
+          </ThemeProvider>
           {/* <AnimatedCursor color="145, 212, 231" /> */}
-          {children}
         </body>
       </html>
     </ViewTransitions>
